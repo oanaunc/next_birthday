@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Birthday Reminder — App Store Submission Pack</title>
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#FBF9FE; --surface:#FFFFFF; --surface-2:#F4F0FB;
+  --ink:#241E33; --ink-2:#5A5170; --ink-3:#8B839F;
+  --rule:#E4DEEF; --rule-2:#CFC6E4;
+  --accent:#6B4FD0; --accent-soft:#EEE9FC;
+  --flag:#A9481F; --flag-soft:#FBEDE6;
+  --ok:#2A6349; --ok-soft:#E6F2EC;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#15121E; --surface:#1D1929; --surface-2:#252036;
+    --ink:#F0EBF9; --ink-2:#B7AECF; --ink-3:#867C9F;
+    --rule:#332C47; --rule-2:#453C5E;
+    --accent:#BBA8FF; --accent-soft:#2A2340;
+    --flag:#E5906A; --flag-soft:#33231C;
+    --ok:#78C7A1; --ok-soft:#1B2E26;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#15121E; --surface:#1D1929; --surface-2:#252036;
+  --ink:#F0EBF9; --ink-2:#B7AECF; --ink-3:#867C9F;
+  --rule:#332C47; --rule-2:#453C5E;
+  --accent:#BBA8FF; --accent-soft:#2A2340;
+  --flag:#E5906A; --flag-soft:#33231C;
+  --ok:#78C7A1; --ok-soft:#1B2E26;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:56px 28px 96px;}
+
+header.masthead{
+  display:flex; flex-direction:column; gap:14px;
+  padding-bottom:26px; border-bottom:2px solid var(--ink); margin-bottom:8px;
+}
+.eyebrow{
+  font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3);
+}
+h1{
+  font-family:"Bricolage Grotesque","Public Sans",sans-serif; font-weight:700;
+  font-size:clamp(30px,5vw,46px); line-height:1.02; margin:0; letter-spacing:-.02em;
+  text-wrap:balance;
+}
+.standfirst{max-width:62ch; color:var(--ink-2); margin:0; font-size:16px;}
+
+.layout{display:grid; grid-template-columns:190px minmax(0,1fr); gap:44px; margin-top:40px;}
+@media (max-width:860px){ .layout{grid-template-columns:1fr; gap:24px} nav.rail{position:static !important} }
+
+nav.rail{position:sticky; top:24px; align-self:start; font-size:13px;}
+nav.rail ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px;}
+nav.rail a{
+  display:flex; gap:10px; padding:5px 8px; border-radius:5px;
+  color:var(--ink-2); text-decoration:none; border-left:2px solid transparent;
+}
+nav.rail a:hover,nav.rail a:focus-visible{background:var(--surface-2); color:var(--ink); border-left-color:var(--accent);}
+nav.rail .n{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--ink-3); padding-top:2px;}
+
+section.block{padding:34px 0; border-top:1px solid var(--rule);}
+section.block:first-of-type{border-top:none; padding-top:8px;}
+h2{
+  font-family:"Bricolage Grotesque","Public Sans",sans-serif; font-weight:700;
+  font-size:23px; margin:0 0 4px; letter-spacing:-.015em; text-wrap:balance;
+}
+h2 .num{font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--accent); margin-right:10px; font-weight:400;}
+.lede{color:var(--ink-2); margin:0 0 20px; max-width:64ch;}
+h3{font-family:"Public Sans",sans-serif; font-size:14px; font-weight:600; margin:26px 0 10px; letter-spacing:.01em;}
+
+.field{
+  background:var(--surface); border:1px solid var(--rule); border-radius:9px;
+  padding:14px 16px; display:flex; flex-direction:column; gap:9px; margin-bottom:10px;
+}
+.fhead{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+.flabel{font-weight:600; font-size:14px;}
+.fmeta{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--ink-3); margin-left:auto; font-variant-numeric:tabular-nums;}
+.note{font-size:13px; color:var(--ink-2); margin:0;}
+
+.val{
+  font-family:"JetBrains Mono",monospace; font-size:13px; line-height:1.6;
+  background:var(--surface-2); border:1px solid var(--rule); border-radius:6px;
+  padding:10px 12px; margin:0; white-space:pre-wrap; word-break:break-word;
+  cursor:pointer; position:relative; transition:border-color .15s;
+}
+.val:hover,.val:focus-visible{border-color:var(--accent);}
+.val::after{
+  content:attr(data-hint); position:absolute; top:6px; right:8px;
+  font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-3); opacity:0; transition:opacity .15s;
+}
+.val:hover::after,.val:focus-visible::after,.val.copied::after{opacity:1;}
+.val.copied{border-color:var(--ok);}
+.val.copied::after{content:"copied"; color:var(--ok);}
+.val.tall{max-height:none;}
+
+.chip{
+  display:inline-block; font-family:"JetBrains Mono",monospace; font-size:10px;
+  letter-spacing:.08em; text-transform:uppercase; padding:2px 7px; border-radius:3px;
+  border:1px solid currentColor; white-space:nowrap;
+}
+.chip.you{color:var(--flag); background:var(--flag-soft);}
+.chip.ready{color:var(--ok); background:var(--ok-soft);}
+.chip.limit{color:var(--accent); background:var(--accent-soft);}
+
+.callout{
+  border-left:3px solid var(--flag); background:var(--flag-soft);
+  padding:14px 18px; border-radius:0 7px 7px 0; margin:0 0 16px;
+}
+.callout p{margin:0 0 8px;} .callout p:last-child{margin:0;}
+.callout strong{color:var(--flag);}
+
+table{width:100%; border-collapse:collapse; font-size:14px; margin:0;}
+.scroller{overflow-x:auto; border:1px solid var(--rule); border-radius:9px; background:var(--surface);}
+th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule); vertical-align:top;}
+th{font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); font-weight:600; white-space:nowrap;}
+tbody tr:last-child td{border-bottom:none;}
+td code{font-family:"JetBrains Mono",monospace; font-size:12.5px; background:var(--surface-2); padding:1px 5px; border-radius:3px;}
+
+ul.plain{margin:0 0 14px; padding-left:20px; color:var(--ink-2);}
+ul.plain li{margin-bottom:5px;}
+ul.plain li strong{color:var(--ink);}
+
+ol.steps{counter-reset:s; list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;}
+ol.steps li{counter-increment:s; display:grid; grid-template-columns:26px 1fr; gap:12px; align-items:start;}
+ol.steps li::before{
+  content:counter(s); font-family:"JetBrains Mono",monospace; font-size:11px;
+  width:24px; height:24px; border-radius:50%; border:1px solid var(--rule-2);
+  display:flex; align-items:center; justify-content:center; color:var(--accent); margin-top:1px;
+}
+ol.steps p{margin:0;} ol.steps .sub{font-size:13px; color:var(--ink-2); margin-top:2px;}
+
+footer.end{margin-top:52px; padding-top:20px; border-top:1px solid var(--rule); font-size:13px; color:var(--ink-3);}
+a{color:var(--accent);}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">App Store Connect · version 1.0</div>
+  <h1>Next Birthday Reminder</h1>
+  <p class="standfirst">Every field App Store Connect will ask for. Values marked <span class="chip ready">ready</span> are written and counted against Apple's limits — click any block to copy it. Values marked <span class="chip you">needs you</span> are things only you can supply.</p>
+</header>
+
+<div class="layout">
+
+<nav class="rail" aria-label="Sections">
+  <ol>
+    <li><a href="#blockers"><span class="n">00</span> Before you start</a></li>
+    <li><a href="#appinfo"><span class="n">01</span> App Information</a></li>
+    <li><a href="#pricing"><span class="n">02</span> Pricing</a></li>
+    <li><a href="#privacy"><span class="n">03</span> App Privacy</a></li>
+    <li><a href="#listing"><span class="n">04</span> Listing copy</a></li>
+    <li><a href="#shots"><span class="n">05</span> Screenshots</a></li>
+    <li><a href="#review"><span class="n">06</span> Review info</a></li>
+    <li><a href="#order"><span class="n">07</span> Order of work</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section class="block" id="blockers">
+  <h2><span class="num">00</span>Before you start</h2>
+  <p class="lede">Four things gate the submission. Everything else in this document is copy-paste.</p>
+
+  <div class="callout">
+    <p><strong>The two URLs must be live.</strong> Apple checks them. Upload <code>nextbirthdayprivacy.html</code> and <code>nextbirthdaysupport.html</code> to oanarinaldi.com before you submit — both are written and sitting in your website folder.</p>
+  </div>
+  <div class="callout">
+    <p><strong>The widget App Group is still missing.</strong> Create <code>group.com.nextbirthday.app</code> and the App ID <code>com.nextbirthday.app.widget</code> at developer.apple.com, then enable App Groups on both App IDs. Until this exists the archive will not upload.</p>
+  </div>
+  <div class="callout">
+    <p><strong>Screenshots can only come from you.</strong> One 6.9-inch set, taken on device or in the simulator. Specs in section 05.</p>
+  </div>
+  <div class="callout">
+    <p><strong>The age-rating questionnaire is now mandatory.</strong> Apple's expanded questionnaire — covering in-app controls, medical content, violence and social features — became a submission requirement in September 2026. My suggested answers are in section 01, but you have to click through it yourself.</p>
+  </div>
+</section>
+
+<section class="block" id="appinfo">
+  <h2><span class="num">01</span>App Information</h2>
+  <p class="lede">Set once, shared by every version.</p>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Name</span><span class="chip limit">30 max</span><span class="fmeta">22 chars</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">Next Birthday Reminder</pre>
+    <p class="note">Already reserved on your existing record. The Home Screen name stays the shorter “Next Birthday”, which is fine and normal.</p>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Subtitle</span><span class="chip limit">30 max</span><span class="fmeta">28 chars</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">Birthday countdown &amp; widgets</pre>
+    <p class="note">Indexed for search, so it deliberately adds two words the name doesn't have rather than restating it.</p>
+  </div>
+
+  <div class="scroller" style="margin-top:16px">
+    <table>
+      <thead><tr><th>Field</th><th>Value</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Bundle ID</td><td><code>com.nextbirthday.app</code></td><td>Already bound to your record. Do not change it.</td></tr>
+        <tr><td>SKU</td><td><code>NEXTBIRTHDAY001</code></td><td>Internal only, never shown publicly.</td></tr>
+        <tr><td>Primary language</td><td>English (U.S.)</td><td></td></tr>
+        <tr><td>Primary category</td><td>Utilities</td><td>It's a tool, not a lifestyle app — Utilities is a smaller pond than Productivity.</td></tr>
+        <tr><td>Secondary category</td><td>Productivity</td><td>Optional but free reach.</td></tr>
+        <tr><td>Content rights</td><td>No third-party content</td><td>Icon, artwork and code are all yours.</td></tr>
+        <tr><td>Age rating</td><td>4+</td><td>No objectionable content of any kind.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Age-rating questionnaire <span class="chip you">needs you</span></h3>
+  <p class="note" style="margin-bottom:12px">Answer <strong>None</strong> or <strong>No</strong> to every question. The ones that trip people up on a utility like this:</p>
+  <ul class="plain">
+    <li><strong>Social features / user-generated content</strong> — No. Nothing is shared between users; there are no accounts.</li>
+    <li><strong>Messaging or communication</strong> — No. The app opens Messages or WhatsApp with a draft; it never sends anything and has no messaging of its own.</li>
+    <li><strong>Medical or wellness content</strong> — No.</li>
+    <li><strong>In-app purchases, gambling, contests</strong> — No.</li>
+    <li><strong>Unrestricted web access</strong> — No. The app never goes online.</li>
+  </ul>
+</section>
+
+<section class="block" id="pricing">
+  <h2><span class="num">02</span>Pricing and Availability</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Price</td><td>Free</td></tr>
+        <tr><td>Availability</td><td>All countries and regions</td></tr>
+        <tr><td>Pre-orders</td><td>No</td></tr>
+        <tr><td>Distribution</td><td>Public on the App Store</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:12px">There is no paid tier and nothing to unlock, so you can skip In-App Purchases and the Paid Apps agreement entirely.</p>
+</section>
+
+<section class="block" id="privacy">
+  <h2><span class="num">03</span>App Privacy</h2>
+  <p class="lede">The questionnaire that produces the privacy label. Your answer is the short one — but the reasoning matters if review queries it.</p>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Privacy Policy URL</span><span class="chip ready">ready</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">https://oanarinaldi.com/nextbirthdayprivacy.html</pre>
+  </div>
+
+  <h3>Data collection</h3>
+  <div class="field">
+    <div class="fhead"><span class="flabel">Do you collect data from this app?</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">No, we do not collect data from this app</pre>
+    <p class="note">Apple defines collection as transmitting data off the device. This app has no server and never opens a network connection, so nothing qualifies — including the Contacts data, which is read locally, copied into the app's own database only for the people you tick, and never transmitted. Reading data is not collecting it.</p>
+  </div>
+
+  <p class="note">You will still be asked to confirm the app doesn't use data for tracking. It doesn't: no analytics SDK, no advertising identifier, no third-party frameworks at all.</p>
+</section>
+
+<section class="block" id="listing">
+  <h2><span class="num">04</span>Listing copy for version 1.0</h2>
+  <p class="lede">All counted against Apple's limits. Promotional text and keywords can be changed later without shipping a new build; the description cannot.</p>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Promotional text</span><span class="chip limit">170 max</span><span class="fmeta">161 chars</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">No account, no ads, no server. Add birthdays by hand or import them from Contacts, get reminders days ahead, and keep gift ideas where you'll actually find them.</pre>
+    <p class="note">Sits above the description and is editable any time — useful for seasonal lines later.</p>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Keywords</span><span class="chip limit">100 max</span><span class="fmeta">98 chars</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">bday,anniversary,gift,ideas,contacts,dates,age,zodiac,friends,family,tracker,offline,private,alert</pre>
+    <p class="note">No spaces after the commas — spaces are charged as characters. Words already in your name and subtitle (birthday, reminder, countdown, widgets) are deliberately absent because Apple indexes those fields separately; repeating them wastes the budget.</p>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Description</span><span class="chip limit">4000 max</span><span class="fmeta">2143 chars</span></div>
+    <pre class="val tall" data-hint="click to copy" tabindex="0">Never forget a birthday again.
+
+Next Birthday Reminder keeps every birthday, reminder, note and gift idea in one place — and keeps all of it on your iPhone. No account, no sign-up, no server, no ads.
+
+UPCOMING AT A GLANCE
+Open the app and the next birthday is right there, with a live countdown down to the second. Below it, everyone else is grouped the way you actually think: Today, Tomorrow, This Week, Next Week, then month by month.
+
+IMPORT FROM CONTACTS
+Bring in the birthdays already saved in your Contacts. You see exactly who will be imported before anything is added, duplicates are flagged, and nothing is written until you tap Import. Access is read-only — your Contacts are never changed.
+
+REMINDERS THAT ARRIVE IN TIME
+Pick as many reminders as you like: on the day, 1 day, 3 days, 1 week, 2 weeks or a month before. Set one time of day for all of them, and override it for anyone who deserves more notice. Early reminders nudge you about a gift; same-day ones nudge you to send a message.
+
+WIDGETS
+Up Next on your Home Screen in three sizes, a big Countdown widget for the next birthday, and Lock Screen widgets that keep the number of days one glance away.
+
+GIFT IDEAS AND NOTES
+Jot ideas down whenever they come up during the year. Tick one off when you buy it and it moves into that person's gift history, so next year you can see what you gave last time. Notes hold the small things — shirt size, favourite flowers, the thing they mentioned wanting.
+
+CALENDAR AND PEOPLE
+A month grid with a dot on every birthday, and a year view showing which months are busy. Search by name, note, relationship, month or zodiac sign. Filter by Family, Friends, Work or your own groups.
+
+DON'T KNOW THE YEAR?
+Leave it out. The countdown still works — the age simply isn't shown. Most people know the day and month and not much else, and the app is built for that.
+
+PRIVATE BY DESIGN
+Everything lives in the app's own database on your iPhone. Nothing is uploaded, there is no analytics SDK, and the app never goes online. Export your birthdays as a plain JSON file any time you want a copy.
+
+Free, with no subscription and nothing to unlock.</pre>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Support URL</span><span class="chip ready">ready</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">https://oanarinaldi.com/nextbirthdaysupport.html</pre>
+    <p class="note">Required. A missing or dead support URL is a routine rejection.</p>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Marketing URL</span><span class="fmeta">optional</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">https://oanarinaldi.com/apps.html</pre>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Copyright</span></div>
+    <pre class="val" data-hint="click to copy" tabindex="0">2026 Oana Rinaldi</pre>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">What's New</span><span class="fmeta">not needed</span></div>
+    <p class="note">Leave empty. This field only appears for updates, not a first release.</p>
+  </div>
+</section>
+
+<section class="block" id="shots">
+  <h2><span class="num">05</span>Screenshots <span class="chip you">needs you</span></h2>
+  <p class="lede">You now only supply the largest size in each family. Apple scales it down for every smaller device, so one iPhone set covers the whole listing.</p>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Requirement</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Display class</td><td>6.9-inch iPhone</td></tr>
+        <tr><td>Portrait size</td><td><code>1320 × 2868</code> (also accepts <code>1290 × 2796</code> and <code>1260 × 2736</code>)</td></tr>
+        <tr><td>Count</td><td>1 to 10 — aim for 5 or 6</td></tr>
+        <tr><td>Format</td><td>PNG or JPEG, sRGB, no transparency or alpha channel</td></tr>
+        <tr><td>Source</td><td>iPhone 16 Pro Max / 17 Pro Max, or that simulator</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>What to shoot, in order</h3>
+  <ol class="steps">
+    <li><p>Upcoming, with the hero card and a live countdown</p><p class="sub">The one screen that sells the app. Seed it with five or six people first — an empty list photographs badly.</p></li>
+    <li><p>Import from Contacts, mid-selection</p><p class="sub">Your strongest differentiator against putting birthdays in Calendar.</p></li>
+    <li><p>A person's detail page showing gift ideas and history</p><p class="sub">Use real-looking ideas, not "test test".</p></li>
+    <li><p>Home Screen with two or three widgets placed</p><p class="sub">Take this from the Home Screen itself, not from inside the app.</p></li>
+    <li><p>Calendar, year view</p><p class="sub">Reads instantly at thumbnail size.</p></li>
+    <li><p>Settings, or the Privacy page</p><p class="sub">"Stays on your iPhone" is a selling point — show it.</p></li>
+  </ol>
+  <p class="note" style="margin-top:14px">Use plausible names and dates. Reviewers notice placeholder junk, and so do buyers.</p>
+</section>
+
+<section class="block" id="review">
+  <h2><span class="num">06</span>App Review Information</h2>
+
+  <div class="scroller" style="margin-bottom:16px">
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Sign-in required</td><td>No — leave the demo account fields empty</td></tr>
+        <tr><td>Contact name</td><td>Oana Rinaldi</td></tr>
+        <tr><td>Contact email</td><td><code>oanarinaldi@gmail.com</code></td></tr>
+        <tr><td>Attachment</td><td>None needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="field">
+    <div class="fhead"><span class="flabel">Notes for the reviewer</span><span class="chip ready">ready</span></div>
+    <pre class="val tall" data-hint="click to copy" tabindex="0">No account or sign-in is required. The app works fully offline and makes no network requests.
+
+Contacts permission is optional. The app works entirely without it — birthdays can be added by hand. If granted, it reads only name and birthday fields to build the import list shown in Import from Contacts, and writes nothing back to Contacts. To test without granting permission, tap Add a Birthday on the first screen.
+
+Widgets require the App Group group.com.nextbirthday.app, which is enabled on both the app and the widget extension. To see them, add "Next Birthday" from the Home Screen widget gallery after adding at least one birthday in the app.
+
+Notifications are local only, scheduled through UNUserNotificationCenter. There is no push server.
+
+The app contains no third-party SDKs, no analytics, no advertising and no in-app purchases.</pre>
+  </div>
+
+  <h3>Export compliance</h3>
+  <p class="note">Already declared in the build — <code>ITSAppUsesNonExemptEncryption</code> is set to <code>false</code> in Info.plist, so App Store Connect will not ask you about encryption at upload. Nothing to do.</p>
+</section>
+
+<section class="block" id="order">
+  <h2><span class="num">07</span>Order of work</h2>
+  <p class="lede">Each step unblocks the next. Doing them out of order is what produced the upload error earlier.</p>
+
+  <ol class="steps">
+    <li><p>Upload the two HTML pages to oanarinaldi.com</p><p class="sub">Open both URLs in a browser and confirm they load before going further.</p></li>
+    <li><p>Register the widget App ID and the App Group at developer.apple.com</p><p class="sub"><code>com.nextbirthday.app.widget</code> and <code>group.com.nextbirthday.app</code>, then enable App Groups on both App IDs and assign the group to each.</p></li>
+    <li><p>In Xcode, set your team on both targets and confirm the App Group row is ticked</p><p class="sub">Automatic signing should resolve with no red errors before you archive.</p></li>
+    <li><p>Archive fresh and upload</p><p class="sub">Discard any earlier archive — those carry the wrong bundle identifier.</p></li>
+    <li><p>Take the screenshots while the build processes</p><p class="sub">Processing takes 10 to 60 minutes; use the time.</p></li>
+    <li><p>Fill in sections 01 to 06 above</p><p class="sub">Everything marked ready is copy-paste.</p></li>
+    <li><p>Complete the age-rating questionnaire</p><p class="sub">Mandatory since September 2026. All answers are None or No.</p></li>
+    <li><p>Attach the build, then Submit for Review</p><p class="sub">The build only appears in the version page once processing finishes.</p></li>
+  </ol>
+</section>
+
+<footer class="end">
+  Written for Next Birthday Reminder 1.0 · bundle <code>com.nextbirthday.app</code> · August 2026. Character counts verified against Apple's field limits.
+</footer>
+
+</main>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.val').forEach(function(el){
+  function grab(){
+    var text = el.textContent;
+    try{
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }catch(e){}
+    try{
+      navigator.clipboard.writeText(text).then(function(){
+        el.classList.add('copied');
+        setTimeout(function(){ el.classList.remove('copied'); }, 1600);
+      }, function(){});
+    }catch(e){}
+  }
+  el.addEventListener('click', grab);
+  el.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); grab(); }
+  });
+});
+</script>
+</body>
+</html>

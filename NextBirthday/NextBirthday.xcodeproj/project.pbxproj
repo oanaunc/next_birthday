@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C98660B35F60E781D306822 /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A367F64AE505EE59B594912B /* PersonRow.swift */; };
+		1187C78A0D6155255C9FDAF7 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66A39A87D082DAEF0EA2D3 /* PersonDetailView.swift */; };
+		12654DBF053305C90CE9292F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB855A61670EFC0001D241 /* Person.swift */; };
+		13B48EDEC5B87972616FC052 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212BDCBBA201F74198E34C3 /* WidgetSnapshot.swift */; };
+		1EA898CE970434DA3F79276C /* ScreenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856520DE2AFB2397D440929 /* ScreenBackground.swift */; };
+		23FB0E0DC67C1412AFF837C5 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C535BA7BF9F1D07A5B07373 /* AppSettings.swift */; };
+		3236F7C60951E7AD077634DC /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48B999C4854629FD22BDBA /* PeopleView.swift */; };
+		337DD23A5DE6E784FC690A0A /* AddEditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD968A32A2E7E6A205BBD5D3 /* AddEditPersonView.swift */; };
+		3C842B4F916F81A563AB9713 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E2333A6464126669CA749 /* BackupService.swift */; };
+		3C9028513D1F1EA183FCEDD8 /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2504619D1E545FF19978972 /* CountdownWidget.swift */; };
+		3E5B862B0CBB64D67D551FBE /* BirthdayMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0762B95B4F4274770B0AE4 /* BirthdayMath.swift */; };
+		4369EE96AFF8B8AE2EF6D3A1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226BACAA9440D4AC2B62AE /* RootView.swift */; };
+		46BC211AA8A807C97EF7144A /* BirthdayMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0762B95B4F4274770B0AE4 /* BirthdayMath.swift */; };
+		492B95E558B22C95F47702C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3374457109E13800DD1B08CC /* Assets.xcassets */; };
+		49A66F8596C259D7B3C5EBD6 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB43F5B396BDE9DB7AD673D6 /* NotificationScheduler.swift */; };
+		642C15B1603889AD6AA6F29F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109DF12E84A2932E95DDDF0C /* OnboardingView.swift */; };
+		64AE64CCBC7FD31A70D5FBC8 /* WidgetSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35729ACB104018D0C41A93AB /* WidgetSync.swift */; };
+		6FAF898239D7C68290ACDE6B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370013FD8A811C1D42AB329 /* Theme.swift */; };
+		776F2D7CB512AE772F0FE772 /* NextBirthdayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3E1E77AAF5F3AAF91BB82 /* NextBirthdayApp.swift */; };
+		887C6DDCA28122E0CFC95649 /* ImportContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE04D7983E0C52038B7D48 /* ImportContactsView.swift */; };
+		8B1C2437A7EB0217F2EF4651 /* GiftIdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F6C13136EFDB0544546B1 /* GiftIdeasView.swift */; };
+		92E8D2691031C0317AC6E449 /* NextBirthdayWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C5F406EF884F0E1085CC1091 /* NextBirthdayWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		989C609E4BAAFC766F607CE4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072F95D0F0A9878E62A87A0 /* SettingsView.swift */; };
+		A132E841E980650A5385AA4A /* WidgetComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F994A755D08B43A52C9AC31 /* WidgetComponents.swift */; };
+		A3DAD82F2D392CF234F78D49 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEC4B84A9FB689AA25353 /* Provider.swift */; };
+		A93D8513AB8B14F2C397CA47 /* QuickActionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03276B8BBBF2F6570085CFBE /* QuickActionsSheet.swift */; };
+		AF30AF4499DF4A840F15B783 /* LockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB31139AE75F68A8EE226E6 /* LockScreenWidget.swift */; };
+		C5D970AF6CAC3741D0FA607B /* BirthdayGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B7FAC2EAEF8037A8D454A /* BirthdayGrouping.swift */; };
+		D42F30FA570429D8577FECCC /* ContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB791666B418E06459A42A0 /* ContactsImporter.swift */; };
+		D90A71DBE0BE520C1EB01FC1 /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8404EC31E0236DC5DF5535D /* CalendarScreen.swift */; };
+		DA77BE45930ECDA38478B463 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BA050BA724A49E0CD05A8 /* UpcomingView.swift */; };
+		DBB371CFE806501B457B907F /* UpNextWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53EB644A29A11869DC02071 /* UpNextWidget.swift */; };
+		DCB48F9EF1C8CB937BED0FA4 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F8382DE047AD64F0EB23AC /* SharedConstants.swift */; };
+		DDCB809B8602C8C8929D04ED /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61769298D84DE6116D086E26 /* HeroCard.swift */; };
+		E33EE28C9E2C5091EC039142 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8367AD1A212DAFDBB5737 /* AvatarView.swift */; };
+		E50E901304F7DFAB5CF2AF5C /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212BDCBBA201F74198E34C3 /* WidgetSnapshot.swift */; };
+		E552963029733E94E9A3BF0F /* NextBirthdayWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E7529AA9CB105DA818CFB /* NextBirthdayWidgetBundle.swift */; };
+		E7195718ADFB71AEBABD711C /* ContactActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6424F518414D33D889B976C1 /* ContactActions.swift */; };
+		ECEF47854D1F86EC87E42EBD /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551754D3C50E37D7100A62A /* Relationship.swift */; };
+		FE7AF17E21ED2572A92BB3DD /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F8382DE047AD64F0EB23AC /* SharedConstants.swift */; };
+		FED5E367D5E0150C99A87D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D1C89C74148D917979FB6D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D799BAE6088A90139B415FCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9831A0ED7992645038323751;
+			remoteInfo = NextBirthdayWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F0AB04EE052351C80F3286E9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92E8D2691031C0317AC6E449 /* NextBirthdayWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03276B8BBBF2F6570085CFBE /* QuickActionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionsSheet.swift; sourceTree = "<group>"; };
+		1072F95D0F0A9878E62A87A0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		109DF12E84A2932E95DDDF0C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		141E2333A6464126669CA749 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		1856520DE2AFB2397D440929 /* ScreenBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBackground.swift; sourceTree = "<group>"; };
+		252E7529AA9CB105DA818CFB /* NextBirthdayWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBirthdayWidgetBundle.swift; sourceTree = "<group>"; };
+		2551754D3C50E37D7100A62A /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		28F8382DE047AD64F0EB23AC /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
+		2C535BA7BF9F1D07A5B07373 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		2F994A755D08B43A52C9AC31 /* WidgetComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetComponents.swift; sourceTree = "<group>"; };
+		2FACEC4B84A9FB689AA25353 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		3374457109E13800DD1B08CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35729ACB104018D0C41A93AB /* WidgetSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSync.swift; sourceTree = "<group>"; };
+		3F66A39A87D082DAEF0EA2D3 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
+		499BA050BA724A49E0CD05A8 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		4F226BACAA9440D4AC2B62AE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		525F078DBCCEDBA780A860C8 /* NextBirthdayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NextBirthdayWidget.entitlements; sourceTree = "<group>"; };
+		554562E9BF762DDC9B48EDB8 /* NextBirthday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NextBirthday.entitlements; sourceTree = "<group>"; };
+		5AA8367AD1A212DAFDBB5737 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		5DAE9DF9C9BE95BB68A18BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61769298D84DE6116D086E26 /* HeroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCard.swift; sourceTree = "<group>"; };
+		6424F518414D33D889B976C1 /* ContactActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActions.swift; sourceTree = "<group>"; };
+		6B4D86ECAEFB3BAB9A21623B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB791666B418E06459A42A0 /* ContactsImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsImporter.swift; sourceTree = "<group>"; };
+		8A0762B95B4F4274770B0AE4 /* BirthdayMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayMath.swift; sourceTree = "<group>"; };
+		9B48B999C4854629FD22BDBA /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		A367F64AE505EE59B594912B /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
+		A8404EC31E0236DC5DF5535D /* CalendarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreen.swift; sourceTree = "<group>"; };
+		AB43F5B396BDE9DB7AD673D6 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		ACC3E1E77AAF5F3AAF91BB82 /* NextBirthdayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBirthdayApp.swift; sourceTree = "<group>"; };
+		AD968A32A2E7E6A205BBD5D3 /* AddEditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonView.swift; sourceTree = "<group>"; };
+		B0EB855A61670EFC0001D241 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B212BDCBBA201F74198E34C3 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
+		B370013FD8A811C1D42AB329 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B3D1C89C74148D917979FB6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6CDB6E5D160E013280D3C68 /* NextBirthday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextBirthday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F406EF884F0E1085CC1091 /* NextBirthdayWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NextBirthdayWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB31139AE75F68A8EE226E6 /* LockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenWidget.swift; sourceTree = "<group>"; };
+		CFDE04D7983E0C52038B7D48 /* ImportContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportContactsView.swift; sourceTree = "<group>"; };
+		DE0B7FAC2EAEF8037A8D454A /* BirthdayGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayGrouping.swift; sourceTree = "<group>"; };
+		E53EB644A29A11869DC02071 /* UpNextWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNextWidget.swift; sourceTree = "<group>"; };
+		E93F6C13136EFDB0544546B1 /* GiftIdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftIdeasView.swift; sourceTree = "<group>"; };
+		F2504619D1E545FF19978972 /* CountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A49A3FD4AA53B0DF18F82EFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D176F0D231D16F915EFE9B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		185C22871963EE22412CBA7E /* NextBirthday */ = {
+			isa = PBXGroup;
+			children = (
+				ACC3E1E77AAF5F3AAF91BB82 /* NextBirthdayApp.swift */,
+				C920155A9A6467FB5CC10DA0 /* Models */,
+				34DF44F350687D839743EEA7 /* Core */,
+				9F1C688CF71AF8E97E91F331 /* Services */,
+				D8AA556D97B214A15F0ECBDB /* Views */,
+				B3D1C89C74148D917979FB6D /* Assets.xcassets */,
+				5DAE9DF9C9BE95BB68A18BF6 /* Info.plist */,
+				554562E9BF762DDC9B48EDB8 /* NextBirthday.entitlements */,
+			);
+			path = NextBirthday;
+			sourceTree = "<group>";
+		};
+		19E6FB9CD88C42DBC3F8AC0C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				28F8382DE047AD64F0EB23AC /* SharedConstants.swift */,
+				8A0762B95B4F4274770B0AE4 /* BirthdayMath.swift */,
+				B212BDCBBA201F74198E34C3 /* WidgetSnapshot.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		250669AA2BFBBB7CF48BC8B3 /* NextBirthdayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				252E7529AA9CB105DA818CFB /* NextBirthdayWidgetBundle.swift */,
+				2FACEC4B84A9FB689AA25353 /* Provider.swift */,
+				2F994A755D08B43A52C9AC31 /* WidgetComponents.swift */,
+				E53EB644A29A11869DC02071 /* UpNextWidget.swift */,
+				F2504619D1E545FF19978972 /* CountdownWidget.swift */,
+				CBB31139AE75F68A8EE226E6 /* LockScreenWidget.swift */,
+				3374457109E13800DD1B08CC /* Assets.xcassets */,
+				6B4D86ECAEFB3BAB9A21623B /* Info.plist */,
+				525F078DBCCEDBA780A860C8 /* NextBirthdayWidget.entitlements */,
+			);
+			path = NextBirthdayWidget;
+			sourceTree = "<group>";
+		};
+		34DF44F350687D839743EEA7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B370013FD8A811C1D42AB329 /* Theme.swift */,
+				1856520DE2AFB2397D440929 /* ScreenBackground.swift */,
+				2C535BA7BF9F1D07A5B07373 /* AppSettings.swift */,
+				5AA8367AD1A212DAFDBB5737 /* AvatarView.swift */,
+				DE0B7FAC2EAEF8037A8D454A /* BirthdayGrouping.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9F1C688CF71AF8E97E91F331 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB43F5B396BDE9DB7AD673D6 /* NotificationScheduler.swift */,
+				6DB791666B418E06459A42A0 /* ContactsImporter.swift */,
+				35729ACB104018D0C41A93AB /* WidgetSync.swift */,
+				6424F518414D33D889B976C1 /* ContactActions.swift */,
+				141E2333A6464126669CA749 /* BackupService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B12E2C6A612204367B8B4BCC /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				185C22871963EE22412CBA7E /* NextBirthday */,
+				250669AA2BFBBB7CF48BC8B3 /* NextBirthdayWidget */,
+				19E6FB9CD88C42DBC3F8AC0C /* Shared */,
+				B40202C75D4FB44D8C59CFA5 /* Products */,
+			);
+			name = MainGroup;
+			sourceTree = "<group>";
+		};
+		B40202C75D4FB44D8C59CFA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6CDB6E5D160E013280D3C68 /* NextBirthday.app */,
+				C5F406EF884F0E1085CC1091 /* NextBirthdayWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C920155A9A6467FB5CC10DA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0EB855A61670EFC0001D241 /* Person.swift */,
+				2551754D3C50E37D7100A62A /* Relationship.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8AA556D97B214A15F0ECBDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F226BACAA9440D4AC2B62AE /* RootView.swift */,
+				109DF12E84A2932E95DDDF0C /* OnboardingView.swift */,
+				499BA050BA724A49E0CD05A8 /* UpcomingView.swift */,
+				61769298D84DE6116D086E26 /* HeroCard.swift */,
+				A367F64AE505EE59B594912B /* PersonRow.swift */,
+				3F66A39A87D082DAEF0EA2D3 /* PersonDetailView.swift */,
+				AD968A32A2E7E6A205BBD5D3 /* AddEditPersonView.swift */,
+				CFDE04D7983E0C52038B7D48 /* ImportContactsView.swift */,
+				A8404EC31E0236DC5DF5535D /* CalendarScreen.swift */,
+				9B48B999C4854629FD22BDBA /* PeopleView.swift */,
+				E93F6C13136EFDB0544546B1 /* GiftIdeasView.swift */,
+				1072F95D0F0A9878E62A87A0 /* SettingsView.swift */,
+				03276B8BBBF2F6570085CFBE /* QuickActionsSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29C7B681C8D62CBAC94D51C0 /* NextBirthday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE00E44D1CF6E2E3FA93958F /* Build configuration list for PBXNativeTarget "NextBirthday" */;
+			buildPhases = (
+				7EC6D9E6268A1DE72A5C6080 /* Sources */,
+				A49A3FD4AA53B0DF18F82EFC /* Frameworks */,
+				3AF33F3745E98800474FFF1C /* Resources */,
+				F0AB04EE052351C80F3286E9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9FAD0C6CD43534327C0AF90 /* PBXTargetDependency */,
+			);
+			name = NextBirthday;
+			productName = NextBirthday;
+			productReference = B6CDB6E5D160E013280D3C68 /* NextBirthday.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9831A0ED7992645038323751 /* NextBirthdayWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F91BB139409857DBD812842 /* Build configuration list for PBXNativeTarget "NextBirthdayWidgetExtension" */;
+			buildPhases = (
+				100696EACD8521AE6A07632C /* Sources */,
+				D176F0D231D16F915EFE9B8C /* Frameworks */,
+				FB856678CD40827C794E8487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NextBirthdayWidgetExtension;
+			productName = NextBirthdayWidgetExtension;
+			productReference = C5F406EF884F0E1085CC1091 /* NextBirthdayWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					29C7B681C8D62CBAC94D51C0 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					9831A0ED7992645038323751 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = EA14EA6A43D4399E6D2CE974 /* Build configuration list for PBXProject "NextBirthday" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B12E2C6A612204367B8B4BCC /* MainGroup */;
+			productRefGroup = B40202C75D4FB44D8C59CFA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29C7B681C8D62CBAC94D51C0 /* NextBirthday */,
+				9831A0ED7992645038323751 /* NextBirthdayWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AF33F3745E98800474FFF1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED5E367D5E0150C99A87D37 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB856678CD40827C794E8487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492B95E558B22C95F47702C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100696EACD8521AE6A07632C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E552963029733E94E9A3BF0F /* NextBirthdayWidgetBundle.swift in Sources */,
+				A3DAD82F2D392CF234F78D49 /* Provider.swift in Sources */,
+				A132E841E980650A5385AA4A /* WidgetComponents.swift in Sources */,
+				DBB371CFE806501B457B907F /* UpNextWidget.swift in Sources */,
+				3C9028513D1F1EA183FCEDD8 /* CountdownWidget.swift in Sources */,
+				AF30AF4499DF4A840F15B783 /* LockScreenWidget.swift in Sources */,
+				DCB48F9EF1C8CB937BED0FA4 /* SharedConstants.swift in Sources */,
+				46BC211AA8A807C97EF7144A /* BirthdayMath.swift in Sources */,
+				E50E901304F7DFAB5CF2AF5C /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC6D9E6268A1DE72A5C6080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				776F2D7CB512AE772F0FE772 /* NextBirthdayApp.swift in Sources */,
+				12654DBF053305C90CE9292F /* Person.swift in Sources */,
+				ECEF47854D1F86EC87E42EBD /* Relationship.swift in Sources */,
+				6FAF898239D7C68290ACDE6B /* Theme.swift in Sources */,
+				1EA898CE970434DA3F79276C /* ScreenBackground.swift in Sources */,
+				23FB0E0DC67C1412AFF837C5 /* AppSettings.swift in Sources */,
+				E33EE28C9E2C5091EC039142 /* AvatarView.swift in Sources */,
+				C5D970AF6CAC3741D0FA607B /* BirthdayGrouping.swift in Sources */,
+				49A66F8596C259D7B3C5EBD6 /* NotificationScheduler.swift in Sources */,
+				D42F30FA570429D8577FECCC /* ContactsImporter.swift in Sources */,
+				64AE64CCBC7FD31A70D5FBC8 /* WidgetSync.swift in Sources */,
+				E7195718ADFB71AEBABD711C /* ContactActions.swift in Sources */,
+				3C842B4F916F81A563AB9713 /* BackupService.swift in Sources */,
+				4369EE96AFF8B8AE2EF6D3A1 /* RootView.swift in Sources */,
+				642C15B1603889AD6AA6F29F /* OnboardingView.swift in Sources */,
+				DA77BE45930ECDA38478B463 /* UpcomingView.swift in Sources */,
+				DDCB809B8602C8C8929D04ED /* HeroCard.swift in Sources */,
+				0C98660B35F60E781D306822 /* PersonRow.swift in Sources */,
+				1187C78A0D6155255C9FDAF7 /* PersonDetailView.swift in Sources */,
+				337DD23A5DE6E784FC690A0A /* AddEditPersonView.swift in Sources */,
+				887C6DDCA28122E0CFC95649 /* ImportContactsView.swift in Sources */,
+				D90A71DBE0BE520C1EB01FC1 /* CalendarScreen.swift in Sources */,
+				3236F7C60951E7AD077634DC /* PeopleView.swift in Sources */,
+				8B1C2437A7EB0217F2EF4651 /* GiftIdeasView.swift in Sources */,
+				989C609E4BAAFC766F607CE4 /* SettingsView.swift in Sources */,
+				A93D8513AB8B14F2C397CA47 /* QuickActionsSheet.swift in Sources */,
+				FE7AF17E21ED2572A92BB3DD /* SharedConstants.swift in Sources */,
+				3E5B862B0CBB64D67D551FBE /* BirthdayMath.swift in Sources */,
+				13B48EDEC5B87972616FC052 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9FAD0C6CD43534327C0AF90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9831A0ED7992645038323751 /* NextBirthdayWidgetExtension */;
+			targetProxy = D799BAE6088A90139B415FCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0649F2F459C59EF5E2EAFBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NextBirthday/NextBirthday.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HBD3XXQK45;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NextBirthday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		280B2C11E6D77F9A6183A0DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3418F1761EE0BEEC9876D89A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NextBirthdayWidget/NextBirthdayWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HBD3XXQK45;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NextBirthdayWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Next Birthday";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		64B26548EBF389338990E49E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NextBirthdayWidget/NextBirthdayWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HBD3XXQK45;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NextBirthdayWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Next Birthday";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7F8BB1A3EB2C90770F1A225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NextBirthday/NextBirthday.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HBD3XXQK45;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NextBirthday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EBD879D687BF83A5D6CB8C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F91BB139409857DBD812842 /* Build configuration list for PBXNativeTarget "NextBirthdayWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B26548EBF389338990E49E /* Debug */,
+				3418F1761EE0BEEC9876D89A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE00E44D1CF6E2E3FA93958F /* Build configuration list for PBXNativeTarget "NextBirthday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7F8BB1A3EB2C90770F1A225 /* Debug */,
+				0649F2F459C59EF5E2EAFBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA14EA6A43D4399E6D2CE974 /* Build configuration list for PBXProject "NextBirthday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD879D687BF83A5D6CB8C15 /* Debug */,
+				280B2C11E6D77F9A6183A0DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}
