@@ -18,6 +18,10 @@ struct PersonDetailView: View {
         ScrollView {
             VStack(spacing: 16) {
                 header
+                NavigationLink { CelebrationPlanView(person: person) } label: {
+                    Label("Plan something meaningful", systemImage: "leaf")
+                        .font(.headline).frame(maxWidth: .infinity).padding()
+                }.buttonStyle(.borderedProminent)
                 countdownCard
                 birthdayFacts
                 remindersCard

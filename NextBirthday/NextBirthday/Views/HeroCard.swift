@@ -42,7 +42,7 @@ struct HeroCard: View {
                     }
                     Text(person.countdownLabel)
                         .font(.largeTitle.weight(.bold))
-                        .fontDesign(.rounded)
+                        .fontDesign(.serif)
                         .foregroundStyle(Theme.purple)
                     if settings.showAge, let age = person.turningAge {
                         Text("Turning \(age)")
@@ -72,23 +72,8 @@ struct HeroCard: View {
             CountdownStrip(target: person.nextBirthday)
         }
         .padding(18)
-        .background(
-            RoundedRectangle(cornerRadius: 26, style: .continuous)
-                .fill(.thinMaterial)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 26, style: .continuous)
-                        .fill(Theme.heroGradient.opacity(0.24))
-                )
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 26, style: .continuous)
-                .stroke(
-                    LinearGradient(colors: [Color.white.opacity(0.9), Theme.lavender.opacity(0.4)],
-                                   startPoint: .topLeading, endPoint: .bottomTrailing),
-                    lineWidth: 1
-                )
-        )
-        .shadow(color: Theme.purple.opacity(0.16), radius: 24, y: 12)
+        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 8))
+        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Theme.lavender.opacity(0.35), lineWidth: 1))
     }
 }
 

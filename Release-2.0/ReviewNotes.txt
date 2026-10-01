@@ -1,0 +1,14 @@
+This build changes Next Birthday from a countdown-focused utility to a private celebration-planning and connection-journaling workflow.
+
+No login is required. Add a person manually or optionally import a birthday from Contacts.
+
+Review path:
+1. Add a birthday, then open Today and select the occasion.
+2. Write a celebration intention and optional budget.
+3. Under Beyond the birthday, save a dated moment together; the entry appears in Moments to keep.
+4. Birthday details & gift ideas opens the existing birthday reminders, notes and gift tools.
+5. Settings > Next Birthday Pro offers monthly/yearly subscriptions with the same entitlement. After a sandbox purchase, add checklist steps and select a catch-up cadence. Due catch-ups appear on Today; cadence does not send separate notifications.
+6. Restore purchases and Manage subscription are available on the Pro screen. Cancellation preserves locally saved plans; core birthday features and connection journaling remain free.
+7. Settings > Data can export/import JSON, including celebration and journal data. Existing version-1 JSON backups remain compatible.
+
+The redesign introduces a new Today workspace, a dedicated personal plan editor, a journal and Pro connection cadence/checklists, together with a new forest-and-paper visual system and original icon. These are functional changes beyond replacing artwork. Apple determines review eligibility; this note does not claim prior approval.

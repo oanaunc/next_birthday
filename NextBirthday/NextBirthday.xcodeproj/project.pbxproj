@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D87DDC429D91E6CA03ADEB73 /* ProPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EB40154F5E50AF6A4CC77D; };
+		675C0010E62BCDA2A6C7A790 /* CelebrationPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60CF9CF239532E258E9FCC7; };
+		7FD61A62C4F94709055C50E3 /* CelebrationStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D843D88E4B992C3BC308BC; };
+		EF920599544AD39EA8845F05 /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EB632F7DCDA21A759F2F2; };
 		0C98660B35F60E781D306822 /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A367F64AE505EE59B594912B /* PersonRow.swift */; };
 		1187C78A0D6155255C9FDAF7 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66A39A87D082DAEF0EA2D3 /* PersonDetailView.swift */; };
 		12654DBF053305C90CE9292F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB855A61670EFC0001D241 /* Person.swift */; };
@@ -75,6 +79,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A9EB40154F5E50AF6A4CC77D /* ProPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPlanView.swift; sourceTree = "<group>"; };
+		F60CF9CF239532E258E9FCC7 /* CelebrationPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationPlanView.swift; sourceTree = "<group>"; };
+		D9D843D88E4B992C3BC308BC /* CelebrationStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationStudioView.swift; sourceTree = "<group>"; };
+		7A0EB632F7DCDA21A759F2F2 /* SubscriptionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStore.swift; sourceTree = "<group>"; };
 		03276B8BBBF2F6570085CFBE /* QuickActionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionsSheet.swift; sourceTree = "<group>"; };
 		1072F95D0F0A9878E62A87A0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		109DF12E84A2932E95DDDF0C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		9F1C688CF71AF8E97E91F331 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7A0EB632F7DCDA21A759F2F2 /* SubscriptionStore.swift */,
 				AB43F5B396BDE9DB7AD673D6 /* NotificationScheduler.swift */,
 				6DB791666B418E06459A42A0 /* ContactsImporter.swift */,
 				35729ACB104018D0C41A93AB /* WidgetSync.swift */,
@@ -235,6 +244,9 @@
 		D8AA556D97B214A15F0ECBDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9EB40154F5E50AF6A4CC77D /* ProPlanView.swift */,
+				F60CF9CF239532E258E9FCC7 /* CelebrationPlanView.swift */,
+				D9D843D88E4B992C3BC308BC /* CelebrationStudioView.swift */,
 				4F226BACAA9440D4AC2B62AE /* RootView.swift */,
 				109DF12E84A2932E95DDDF0C /* OnboardingView.swift */,
 				499BA050BA724A49E0CD05A8 /* UpcomingView.swift */,
@@ -369,6 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				776F2D7CB512AE772F0FE772 /* NextBirthdayApp.swift in Sources */,
+				D87DDC429D91E6CA03ADEB73 /* ProPlanView.swift in Sources */,
+				675C0010E62BCDA2A6C7A790 /* CelebrationPlanView.swift in Sources */,
+				7FD61A62C4F94709055C50E3 /* CelebrationStudioView.swift in Sources */,
+				EF920599544AD39EA8845F05 /* SubscriptionStore.swift in Sources */,
 				12654DBF053305C90CE9292F /* Person.swift in Sources */,
 				ECEF47854D1F86EC87E42EBD /* Relationship.swift in Sources */,
 				6FAF898239D7C68290ACDE6B /* Theme.swift in Sources */,
@@ -418,7 +434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NextBirthday/NextBirthday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HBD3XXQK45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -427,7 +443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -498,7 +514,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = NextBirthdayWidget/NextBirthdayWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HBD3XXQK45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -509,7 +525,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -525,7 +541,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = NextBirthdayWidget/NextBirthdayWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HBD3XXQK45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -536,7 +552,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -552,7 +568,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NextBirthday/NextBirthday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HBD3XXQK45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -561,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nextbirthday.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

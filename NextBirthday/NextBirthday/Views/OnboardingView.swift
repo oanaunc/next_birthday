@@ -38,11 +38,11 @@ struct OnboardingView: View {
         VStack(spacing: 20) {
             Spacer()
 
-            Image("AppLogo")
+            Image("CareGestures")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 180, height: 180)
-                .clipShape(RoundedRectangle(cornerRadius: 44, style: .continuous))
+                .frame(width: 210, height: 210)
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .shadow(color: Theme.deepInk.opacity(0.2), radius: 24, y: 12)
                 .overlay(alignment: .topTrailing) {
                     Image(systemName: "sparkles")
@@ -58,21 +58,21 @@ struct OnboardingView: View {
                     .font(.largeTitle.weight(.bold))
                     .fontDesign(.serif)
                     .foregroundStyle(Theme.deepInk)
-                Text("Never forget a birthday.")
+                Text("Make people feel remembered.")
                     .font(.title3)
                     .foregroundStyle(.secondary)
             }
 
             VStack(alignment: .leading, spacing: 16) {
                 FeatureRow(icon: "bell.badge.fill", tint: Theme.purple,
-                           title: "Beautiful reminders",
-                           subtitle: "Nudges days ahead, not just on the day.")
+                           title: "From date to thoughtful plan",
+                           subtitle: "Plan a gesture, set a budget, make it happen.")
                 FeatureRow(icon: "heart.fill", tint: Theme.rose,
-                           title: "Thoughtful connections",
-                           subtitle: "Keep gift ideas and notes for everyone.")
+                           title: "A journal of showing up",
+                           subtitle: "Remember time together, not just birthdays.")
                 FeatureRow(icon: "lock.fill", tint: Theme.blue,
                            title: "Private by design",
-                           subtitle: "Everything stays on your iPhone.")
+                           subtitle: "Your personal notes stay on your iPhone.")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 28)

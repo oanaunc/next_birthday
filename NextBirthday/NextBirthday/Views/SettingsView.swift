@@ -20,6 +20,14 @@ struct SettingsView: View {
 
         NavigationStack {
             Form {
+                Section("A little more room to care") {
+                    NavigationLink { ProPlanView() } label: {
+                        Label("Next Birthday Pro", systemImage: "leaf.circle")
+                    }
+                    NavigationLink { CalendarScreen() } label: {
+                        Label("Birthday calendar", systemImage: "calendar")
+                    }
+                }
                 // MARK: Reminders
                 Section {
                     NavigationLink {
@@ -77,7 +85,7 @@ struct SettingsView: View {
                     }
 
                     Toggle(isOn: $settings.showBackgroundArt) {
-                        Label("Background artwork", systemImage: "photo.on.rectangle.angled")
+                        Label("Warm background wash", systemImage: "photo.on.rectangle.angled")
                     }
                 }
 
@@ -283,7 +291,9 @@ struct PrivacyView: View {
                     .foregroundStyle(Theme.deepInk)
 
                 Text("""
-Next Birthday has no account, no login and no server. Everything you add — names, dates, photos, notes and gift ideas — is stored in the app's own database on this device.
+Next Birthday has no account, no login and no server. Everything you add — names, dates, photos, notes, gift ideas, celebration plans and journal entries — is stored in the app's own database on this device.
+
+Optional Pro subscriptions connect to Apple through StoreKit to load plans, process purchases and verify access. Your personal planning data is not sent with purchases. Apple handles billing.
 
 Contacts access is optional and read-only. When you import, the app reads the names and birthdays you select and copies them locally. It never uploads them, and it never writes back to your Contacts.
 

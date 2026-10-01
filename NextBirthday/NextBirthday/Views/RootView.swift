@@ -5,14 +5,15 @@ import SwiftData
 struct RootView: View {
 
     @Environment(AppSettings.self) private var settings
+    @Environment(SubscriptionStore.self) private var subscriptions
     @Environment(\.scenePhase) private var scenePhase
     @Query private var people: [Person]
 
-    @State private var selectedTab: Tab = .upcoming
+    @State private var selectedTab: Tab = .studio
     @State private var showingAdd = false
     @State private var deepLinkedPerson: Person?
 
-    enum Tab: Hashable { case upcoming, calendar, people, settings }
+    enum Tab: Hashable { case upcoming, calendar, people, settings, studio }
 
     var body: some View {
         Group {
@@ -35,13 +36,14 @@ struct RootView: View {
 
     private var mainTabs: some View {
         TabView(selection: $selectedTab) {
+            CelebrationStudioView(showingAdd: $showingAdd)
+                .tabItem { Label("Today", systemImage: "leaf.fill") }
+                .tag(Tab.studio)
+
             UpcomingView(showingAdd: $showingAdd)
-                .tabItem { Label("Upcoming", systemImage: "gift.fill") }
+                .tabItem { Label("Birthdays", systemImage: "gift.fill") }
                 .tag(Tab.upcoming)
 
-            CalendarScreen()
-                .tabItem { Label("Calendar", systemImage: "calendar") }
-                .tag(Tab.calendar)
 
             PeopleView(showingAdd: $showingAdd)
                 .tabItem { Label("People", systemImage: "person.2.fill") }
@@ -80,6 +82,7 @@ struct RootView: View {
 
     @MainActor
     private func syncEverything() async {
+        await subscriptions.refreshEntitlements()
         WidgetSync.refresh(with: people)
         await NotificationScheduler.rebuild(for: people, settings: settings)
     }

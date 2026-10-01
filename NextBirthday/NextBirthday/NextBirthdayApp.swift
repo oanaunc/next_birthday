@@ -6,6 +6,7 @@ import UIKit
 struct NextBirthdayApp: App {
 
     @State private var settings = AppSettings()
+    @State private var subscriptions = SubscriptionStore()
 
     /// Everything lives on the device. No account, no server.
     private let container: ModelContainer = {
@@ -27,6 +28,8 @@ struct NextBirthdayApp: App {
         WindowGroup {
             appRoot
                 .environment(settings)
+                .environment(subscriptions)
+                .task { await subscriptions.start() }
                 .tint(settings.accentColor)
                 .preferredColorScheme(.light)
         }
@@ -80,6 +83,11 @@ private struct DemoScreenshotRoot: View {
     @ViewBuilder
     private var screen: some View {
         switch route {
+        case "studio": CelebrationStudioView(showingAdd: $showingAdd)
+        case "journal": NavigationStack { CelebrationPlanView(person: person(named: "Emma"), startsAtJournal: true) }
+        case "privacy": NavigationStack { PrivacyView() }
+        case "plan": NavigationStack { CelebrationPlanView(person: person(named: "Emma")) }
+        case "pro": NavigationStack { ProPlanView() }
         case "calendar": CalendarScreen()
         case "people": PeopleView(showingAdd: $showingAdd)
         case "settings": SettingsView()
@@ -127,6 +135,12 @@ private struct DemoScreenshotRoot: View {
             context.insert(person)
 
             if spec.0 == "Emma" {
+                person.celebrationIntent = "A sunrise picnic, just the two of us."
+                person.celebrationBudget = 40
+                person.celebrationChecklist = ["Find a quiet spot", "Bring her favorite coffee", "Write a handwritten note"]
+                person.completedCelebrationSteps = ["Find a quiet spot"]
+                person.connectionJournal = ["September 24 — A long walk and a good conversation."]
+                person.lastConnectionDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())
                 for title in ["Personalized necklace", "Spa day", "Weekend getaway"] {
                     let idea = GiftIdea(title: title, person: person)
                     context.insert(idea)

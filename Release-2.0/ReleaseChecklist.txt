@@ -1,0 +1,16 @@
+Release 2.0 (build 3), bundle com.nextbirthday.app (unchanged)
+
+Subscription products created in App Store Connect group 22431822, both service level 1:
+com.nextbirthday.app.pro.monthly — Next Birthday Pro Monthly — 1 month
+com.nextbirthday.app.pro.yearly — Next Birthday Pro Yearly — 1 year
+Draft US base pricing: $1.99/month and $14.99/year. English (US) group/product localizations created. US base prices and all 175 current territories saved; future territory expansion remains off. Add a subscription review screenshot. Include new subscriptions with the app submission. Confirm paid-app agreements/tax/banking are active.
+
+Before submission:
+- Exercise actual sandbox purchase, restore, pending approval, expiration and revocation. Compiling StoreKit code does not verify production products.
+- Replace old App Store screenshots with the composed AppStoreScreenshots/ (1320x2868) or AppStoreScreenshots-1242x2688/ gallery; capture an actual configured paywall after product setup.
+- Version 2.0 description, promotional text, keywords and reviewer walkthrough saved in App Store Connect. Select processed build 3; old build 1 remains associated until replacement.
+- Uploaded signed version 2.0 build 3 successfully; awaiting final selection and review submission. Use AppStoreDescription.txt and ReviewNotes.txt; suggested subtitle: Thoughtful plans & connections.
+- Verify live privacy/support updates after website deployment.
+- Verify App Privacy responses against actual Apple transaction processing. No developer analytics or payment-card collection is implemented.
+- Original rejection verified: September 2, 2026, Guideline 4.3(a), similar binary/metadata/concept. No other issues listed on the original submission.
+- Submit only after confirming submission intent (the original request ended mid-sentence).

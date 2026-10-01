@@ -1,0 +1,10 @@
+Generated with the built-in image_gen tool on October 1, 2026.
+
+Shared direction: premium editorial tactile layered paper-cut sculpture; forest green #245C49, sage, warm ivory, terracotta and ochre; soft dimensional shadows and handmade paper texture; no legible text, phones, UI, logos or watermark.
+
+gestures.png: Thoughtful still life of an unlettered envelope, a small ribbon-wrapped gift, olive sprig, golden sun and two coffee cups. Asymmetric spacious composition on warm ivory paper.
+picnic.png: Two people sharing a picnic under an olive tree beside a calm curving lake, ivory blanket, two coffee cups and a textured ochre sunrise. Refined crafted magazine illustration.
+journal.png: Open cream journal with unlettered ruled pages, pressed olive leaf, terracotta heart keepsake and gold pencil; paper vignettes suggesting a walk, coffee and a sunset.
+rhythm.png: Flowing forest-green ribbon connects four ivory circles across sage paper hills, containing two coffee cups, olive sprig, envelope and ochre sun. Elegant visual rhythm with sculptural layers.
+
+Campaign: ten designed panels, typeset with Georgia and system sans, cream/forest layouts, generated editorial illustrations and unmodified real simulator captures inside phone frames. Native renderer is scripts/render-campaign.swift; source captures are Release-2.0/Screenshots. Final sizes: 1320x2868 and 1242x2688, PNG without alpha.

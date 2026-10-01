@@ -34,7 +34,7 @@ struct UpcomingView: View {
                 }
             }
             .screenBackground(.upcoming)
-            .navigationTitle("Upcoming")
+            .navigationTitle("Birthdays")
             .navigationDestination(for: Person.self) { PersonDetailView(person: $0) }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

@@ -1,16 +1,16 @@
 import SwiftUI
 
 /// Named background artwork shipped in the asset catalog, one per screen.
-enum BackgroundArt: String {
-    case onboarding = "BGOnboarding"
-    case upcoming   = "BGUpcoming"
-    case calendar   = "BGCalendar"
-    case people     = "BGPeople"
-    case settings   = "BGSettings"
-    case detail     = "BGDetail"
-    case add        = "BGAdd"
-    case gifts      = "BGGifts"
-    case importing  = "BGImport"
+enum BackgroundArt {
+    case onboarding
+    case upcoming
+    case calendar
+    case people
+    case settings
+    case detail
+    case add
+    case gifts
+    case importing
 }
 
 /// Puts softened artwork behind a screen without hurting legibility.
@@ -27,40 +27,10 @@ struct ScreenBackground: View {
 
     var body: some View {
         ZStack {
-            Color(colorScheme == .dark ? .systemBackground : .white)
-
-            Theme.fallbackGradient
-                .opacity(colorScheme == .dark ? 0.22 : 0.9)
-
-            Circle()
-                .fill(Theme.lavender.opacity(colorScheme == .dark ? 0.14 : 0.28))
-                .frame(width: 390, height: 390)
-                .blur(radius: 70)
-                .offset(x: -150, y: -290)
-
-            Circle()
-                .fill(Theme.pink.opacity(colorScheme == .dark ? 0.10 : 0.2))
-                .frame(width: 340, height: 340)
-                .blur(radius: 80)
-                .offset(x: 170, y: 260)
-
+            Color(colorScheme == .dark ? .systemBackground : .init(red: 0.965, green: 0.953, blue: 0.922, alpha: 1))
             if settings.showBackgroundArt {
-                Image(art.rawValue)
-                    .resizable()
-                    .scaledToFill()
-                    .blur(radius: blur, opaque: true)
-                    .opacity(colorScheme == .dark ? intensity * 0.34 : intensity * 0.72)
-                    .saturation(0.72)
+                LinearGradient(colors: [Theme.mint.opacity(0.08), .clear, Theme.peach.opacity(0.12)], startPoint: .topLeading, endPoint: .bottomTrailing)
             }
-
-            // Scrim: keeps text readable no matter how busy the art is.
-            LinearGradient(
-                colors: colorScheme == .dark
-                    ? [Color.black.opacity(0.72), Color.black.opacity(0.86)]
-                    : [Color.white.opacity(0.42), Theme.blush.opacity(0.68)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
         }
         .ignoresSafeArea()
     }
@@ -87,13 +57,13 @@ struct GlassCard<Content: View>: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .fill(.thinMaterial)
+                    .fill(Color(.secondarySystemGroupedBackground))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
                     .stroke(
                         LinearGradient(
-                            colors: [Color.white.opacity(0.85), Theme.lavender.opacity(0.28)],
+                            colors: [Theme.lavender.opacity(0.25), Theme.lavender.opacity(0.25)],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         ),

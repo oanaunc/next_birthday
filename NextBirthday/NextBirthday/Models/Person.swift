@@ -19,6 +19,13 @@ final class Person {
 
     var isFavorite: Bool = false
     var notes: String = ""
+    var celebrationIntent: String = ""
+    var celebrationBudget: Double = 0
+    var celebrationChecklist: [String] = []
+    var completedCelebrationSteps: [String] = []
+    var connectionCadence: Int = 0
+    var lastConnectionDate: Date?
+    var connectionJournal: [String] = []
 
     @Attribute(.externalStorage) var photoData: Data?
 

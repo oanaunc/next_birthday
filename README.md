@@ -1,3 +1,19 @@
+# Next Birthday 2.0 — make people feel remembered
+
+A private celebration planner and connection journal, built with SwiftUI, SwiftData, WidgetKit and StoreKit 2. The Today workspace turns upcoming birthdays into personal intentions, budgets and moments together. Optional Pro adds editable celebration checklists and a per-person catch-up cadence. Core birthdays, reminders, gift ideas, journal, intentions, budgets and backups stay free.
+
+Open `NextBirthday/NextBirthday.xcodeproj`. Bundle IDs and App Group remain tied to the existing App Store Connect record. Personal data stays local; Apple handles subscription product loading, purchases and entitlement verification.
+
+Build: `xcodebuild -project NextBirthday/NextBirthday.xcodeproj -scheme NextBirthday -sdk iphonesimulator build CODE_SIGNING_ALLOWED=NO`
+
+Backup tests: `scripts/test-backups.sh` (Apple silicon macOS 14+). Covers planning/journal round trips, legacy JSON, duplicates and malformed data.
+
+Release assets and review copy: `Release-2.0/`. Subscription product IDs are in `SubscriptionStore.swift`; configure both in one App Store Connect group at the same service level. Real product setup and sandbox lifecycle testing are still required before paid release. Unavailable products show an honest retry state; there is no fake unlock.
+
+Original implementation notes below describe version 1 and are retained for historical context. The network-free statements do not apply to optional StoreKit subscriptions in version 2.
+
+---
+
 # Next Birthday — iOS app + widgets
 
 A complete, offline-first birthday app for iPhone: SwiftUI + SwiftData + WidgetKit, no account, no server, no network calls at all.

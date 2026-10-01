@@ -20,6 +20,13 @@ enum BackupService {
         var giftIdeas: [String]
         var giftedIdeas: [String]
         var giftHistory: [BackupGift]
+        var celebrationIntent: String?
+        var celebrationBudget: Double?
+        var celebrationChecklist: [String]?
+        var completedCelebrationSteps: [String]?
+        var connectionCadence: Int?
+        var lastConnectionDate: Date?
+        var connectionJournal: [String]?
     }
 
     struct BackupGift: Codable {
@@ -29,7 +36,7 @@ enum BackupService {
 
     struct Backup: Codable {
         var app = "Next Birthday"
-        var version = 1
+        var version = 2
         var exportedAt = Date()
         var people: [BackupPerson]
     }
@@ -52,7 +59,14 @@ enum BackupService {
                 customReminderDays: person.customReminderDays,
                 giftIdeas: person.sortedGiftIdeas.filter { !$0.isPurchased }.map(\.title),
                 giftedIdeas: person.sortedGiftIdeas.filter(\.isPurchased).map(\.title),
-                giftHistory: person.sortedGiftHistory.map { BackupGift(year: $0.year, item: $0.item) }
+                giftHistory: person.sortedGiftHistory.map { BackupGift(year: $0.year, item: $0.item) },
+                celebrationIntent: person.celebrationIntent,
+                celebrationBudget: person.celebrationBudget,
+                celebrationChecklist: person.celebrationChecklist,
+                completedCelebrationSteps: person.completedCelebrationSteps,
+                connectionCadence: person.connectionCadence,
+                lastConnectionDate: person.lastConnectionDate,
+                connectionJournal: person.connectionJournal
             )
         })
     }
@@ -121,6 +135,13 @@ enum BackupService {
                                 notes: entry.notes)
             person.usesCustomReminders = entry.usesCustomReminders
             person.customReminderDays = entry.customReminderDays
+            person.celebrationIntent = entry.celebrationIntent ?? ""
+            person.celebrationBudget = max(0, entry.celebrationBudget ?? 0)
+            person.celebrationChecklist = entry.celebrationChecklist ?? []
+            person.completedCelebrationSteps = entry.completedCelebrationSteps ?? []
+            person.connectionCadence = entry.connectionCadence ?? 0
+            person.lastConnectionDate = entry.lastConnectionDate
+            person.connectionJournal = entry.connectionJournal ?? []
             context.insert(person)
 
             for title in entry.giftIdeas {
@@ -137,7 +158,7 @@ enum BackupService {
             added += 1
         }
 
-        try? context.save()
+        do { try context.save() } catch { context.rollback(); return .failure("Could not save the imported backup. Please try again.") }
         return .success(added: added, skipped: skipped)
     }
 }
