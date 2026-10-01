@@ -135,3 +135,5 @@ The originals in `images/` are untouched — swap any background by replacing th
 ## If the project file won't open
 
 `project.pbxproj` was generated programmatically and checked (balanced syntax, no duplicate or dangling object IDs, every source file compiled exactly once per target, every group path resolving to a real file). If Xcode still rejects it, the fallback is to create a fresh iOS App project plus a Widget Extension target in Xcode and drag in the `NextBirthday/`, `Shared/` and `NextBirthdayWidget/` folders — adding the three `Shared/` files to both targets. Nothing in the source depends on the generated project file.
+
+Local Pro entitlement regression: run `scripts/test-subscriptions.sh`; scope and remaining real sandbox checks are documented in `Tests/StoreKit/README.txt`.
