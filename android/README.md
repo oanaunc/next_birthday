@@ -23,7 +23,7 @@ The signed outputs are `app/build/outputs/bundle/release/app-release.aab` and `a
 
 Onboarding; Today; Birthdays with live countdowns and grouping; searchable/filterable/sortable People; Add/Edit with optional year, custom relationships, photos, favorites and reminders; birthday details; celebration plans and budgets; Pro checklists and catch-up cadence; free dated connection journal; gift ideas, gifted filters and history; month/year calendar; quick contact actions; settings, privacy and widget help; optional Contacts import; iOS-compatible version 1/2 JSON backup import and version 2 export.
 
-The four `Care*.png` images are copied from the iOS asset catalog. The app logo is the original repository logo. Colors and sizes follow the SwiftUI views. Android status bars, pickers, sharing, permissions, widgets and font rendering use Android facilities; pixel identity with Apple's proprietary fonts and system surfaces has not been certified. Compact widgets support the Lock Screen only on Android devices that provide it.
+The four `Care*.png` images are copied from the iOS asset catalog. The app logo and launcher icon are copied from the current iOS AppIcon1024 asset. Colors and sizes follow the SwiftUI views. Android status bars, pickers, sharing, permissions, widgets and font rendering use Android facilities; pixel identity with Apple's proprietary fonts and system surfaces has not been certified. Compact widgets support the Lock Screen only on Android devices that provide it.
 
 Swipe right on a person to toggle Favorite. Swipe left or long-press for row actions. The person menu also exposes editing, sharing, favorites and deletion. Saved Pro plans remain readable after access ends.
 

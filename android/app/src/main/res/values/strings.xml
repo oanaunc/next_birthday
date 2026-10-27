@@ -1,4 +1,5 @@
 <resources>
+    <color name="launcher_background">#245C49</color>
     <string name="app_name">Next Birthday</string>
     <string name="widget_upnext">Next Birthday · Up Next</string>
     <string name="widget_countdown">Next Birthday · Countdown</string>
