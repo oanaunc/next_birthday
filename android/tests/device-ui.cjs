@@ -10,7 +10,8 @@ async function main(){
   sh('shell','pm','grant','com.oanarinaldi.nextbirthday','android.permission.POST_NOTIFICATIONS');
   let {browser,page}=await connect();const errors=[];page.on('pageerror',e=>errors.push(e.message));
   const original=await page.evaluate(()=>Android.read());
-  const save=async name=>{await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});sh('shell','input','keyevent','111');await page.getByRole('main').waitFor();fs.writeFileSync(path.join(screenshots,name+'.png'),execFileSync(adb,['exec-out','screencap','-p']));};
+  const paint=async()=>{await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>requestAnimationFrame(r)))));await new Promise(r=>setTimeout(r,250));};
+  const save=async name=>{await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});sh('shell','input','keyevent','111');await page.getByRole('main').waitFor();await paint();fs.writeFileSync(path.join(screenshots,name+'.png'),execFileSync(adb,['exec-out','screencap','-p']));};
   try{
     await page.evaluate(()=>{const s=Birthday.empty();s.revision=JSON.parse(Android.read()||'{"revision":0}').revision;state=s;storageError=null;persist(s);onboardingPage=0;route={screen:'today'};render();});
     await save('01-welcome');
@@ -49,7 +50,7 @@ async function main(){
     // Screenshots use the same sample people, plans, and artwork as the iOS showroom.
     await page.evaluate(()=>{const s=Birthday.demo();s.revision=state.revision;s.settings.hasCompletedOnboarding=true;persist(s);billing.isPro=false;switchTab('today');});
     await save('02-today');await page.evaluate(()=>switchTab('birthdays'));await save('03-birthdays');await page.evaluate(()=>switchTab('people'));await save('04-people');
-    await page.evaluate(()=>navigate('plan',state.people[0].uuid));await save('05-plan');await page.evaluate(()=>document.getElementById('journal')?.scrollIntoView());fs.writeFileSync(path.join(screenshots,'06-journal.png'),execFileSync(adb,['exec-out','screencap','-p']));
+    await page.evaluate(()=>navigate('plan',state.people[0].uuid));await save('05-plan');await page.evaluate(()=>document.getElementById('journal')?.scrollIntoView());await paint();fs.writeFileSync(path.join(screenshots,'06-journal.png'),execFileSync(adb,['exec-out','screencap','-p']));
     await page.evaluate(()=>navigate('gifts',state.people[0].uuid));await save('07-gifts');await page.evaluate(()=>navigate('calendar'));await save('08-calendar');await page.evaluate(()=>navigate('pro'));await save('09-pro');await page.evaluate(()=>switchTab('settings'));await save('10-settings');await page.evaluate(()=>navigate('privacy'));await save('11-privacy');
     await page.evaluate(()=>openEditor(null));await save('12-add');
     const broken=await page.evaluate(()=>[...document.images].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src));assert.deepEqual(broken,[]);assert.deepEqual(errors,[]);console.log('PASS: all showroom screens render with no JavaScript errors or missing images');
