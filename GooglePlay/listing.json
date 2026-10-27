@@ -1,0 +1,15 @@
+{
+  "language": "en-US",
+  "title": "Next Birthday Reminder",
+  "shortDescription": "Thoughtful birthday plans, local reminders, gift ideas and a connection journal.",
+  "fullDescription": "Make people feel remembered.\n\nNext Birthday is a private celebration planner for the people who matter to you. Go beyond a countdown: turn what you know about someone into a thoughtful gesture, and remember the moments you share throughout the year.\n\nYOUR TODAY\nSee the next occasion, your celebration intention and the people on your horizon in a calm, easy-to-read space.\n\nTHOUGHTFUL PLANS\nWrite a personal intention and set an optional budget. Keep gift ideas and a history of past gifts alongside each person's birthday.\n\nMOMENTS TO KEEP\nSave a dated note about time together. Keep the little details that make the next conversation personal.\n\nTHE BIRTHDAY ESSENTIALS\nUnlimited people, optional Contacts import, local reminders, calendar, favorites, resizable Home Screen widgets, and JSON backup export/import compatible with Next Birthday on iPhone. Birthday years are optional. Compact widgets can also appear on the Lock Screen on supported Android devices.\n\nOPTIONAL NEXT BIRTHDAY PRO\nAn auto-renewing monthly or yearly subscription adds editable celebration checklists and a personal catch-up cadence. Choose a rhythm for each person and see due catch-ups on Today when you open the app. Both plans include the same features. Your saved checklists remain readable when Pro ends. Birthday reminders, intentions, budgets, gift ideas, journaling and backups remain free.\n\nNo developer account, advertising or analytics. Your personal notes and plans stay on your device. Google Play processes subscriptions. Prices and billing periods are shown before purchase. Payment is charged to your Google Play account; subscriptions renew automatically unless cancelled before the end of the current period. Manage or cancel in Google Play subscription settings. Android can delay local reminders and widget updates during battery saving.\n\nPrivacy: https://oanarinaldi.com/nextbirthdayandroidprivacy.html\nTerms of Use: https://oanarinaldi.com/nextbirthdayterms.html\nSupport: oanarinaldi@gmail.com",
+  "category": "LIFESTYLE",
+  "supportEmail": "oanarinaldi@gmail.com",
+  "website": "https://oanarinaldi.com/nextbirthdaysupport.html",
+  "privacyPolicy": "https://oanarinaldi.com/nextbirthdayandroidprivacy.html",
+  "releaseNotes": "Next Birthday comes to Android: thoughtful celebration plans, a connection journal, gift ideas and history, birthdays, local reminders, Contacts import, calendar, widgets, portable backups, and optional Pro checklists and catch-up rhythms.",
+  "subscriptions": [
+    {"productId": "nextbirthday.pro.monthly", "basePlanId": "monthly", "billingPeriod": "P1M", "usdPrice": "1.99"},
+    {"productId": "nextbirthday.pro.yearly", "basePlanId": "yearly", "billingPeriod": "P1Y", "usdPrice": "14.99"}
+  ]
+}

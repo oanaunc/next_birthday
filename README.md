@@ -1,5 +1,7 @@
 # Next Birthday 2.0 — make people feel remembered
 
+Android: see [android/README.md](android/README.md) for the Google Play build, native services and tests. Store assets and submission status are in [GooglePlay/RELEASE.md](GooglePlay/RELEASE.md).
+
 A private celebration planner and connection journal, built with SwiftUI, SwiftData, WidgetKit and StoreKit 2. The Today workspace turns upcoming birthdays into personal intentions, budgets and moments together. Optional Pro adds editable celebration checklists and a per-person catch-up cadence. Core birthdays, reminders, gift ideas, journal, intentions, budgets and backups stay free.
 
 Open `NextBirthday/NextBirthday.xcodeproj`. Bundle IDs and App Group remain tied to the existing App Store Connect record. Personal data stays local; Apple handles subscription product loading, purchases and entitlement verification.
