@@ -16,7 +16,7 @@ Validation completed on 27 October 2026:
 - 6 emulator UI verification groups passed (onboarding/editor, free plans/journal and Pro gating, gift history/undo, search/settings/backups, process restart persistence, showroom rendering). Twelve actual Android screenshots are under `screenshots/phone/`.
 - Google Play purchase lifecycle testing is still required with a licensed account; local tests do not simulate real payments.
 
-Release bundle SHA-256: `56dd7883415e101aba59734038d62f7f3006c111d47b43eef72f65323ec25cda`.
+Release bundle SHA-256: `d22819b9ba82d55b25931252b75e9a105411fa8f71063d8f530ea3b50a653215`.
 
 Subscription setup mirrors the iOS StoreKit configuration: monthly USD 1.99 and yearly USD 14.99, with localized Play prices shown by the app. Product IDs: `nextbirthday.pro.monthly` and `nextbirthday.pro.yearly`.
 
