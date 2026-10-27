@@ -18,10 +18,12 @@ Validation completed on 27 October 2026:
 
 Release bundle SHA-256: `499fe26dea2937f2db25b4f83797e0818c3e04ee88025f4994dae7c1fd14b2b1`.
 
-Subscription setup mirrors the iOS StoreKit configuration: monthly USD 1.99 and yearly USD 14.99, with localized Play prices shown by the app. Product IDs: `nextbirthday.pro.monthly` and `nextbirthday.pro.yearly`.
+Both subscription base plans are active in Google Play: monthly USD 1.99 (RON 11.99) and yearly USD 14.99 (RON 84.99), matching the iOS StoreKit configuration. Localized Play prices are shown by the app. Product IDs: `nextbirthday.pro.monthly` and `nextbirthday.pro.yearly`. Evidence: `review/subscriptions.png`.
 
 Private signing identity and reviewer code: `~/.local/share/nextbirthday/android-upload/`. Never commit those files or include the reviewer code in public release copy.
 
 Privacy and terms were published through `oanaunc/oanarina_website` commit `08a4955`; the hosting workflow succeeded and the privacy page returned HTTP 200.
 
-Submission status: app record created; listing, declarations, products and production release are being configured. Not yet submitted for review.
+Submission status: submitted to Google Play on 27 October 2026. Console confirmed “11 modificări trimise spre examinare” and now displays “Modificări care se examinează”. Automated pre-review checks are still running; the queued changes proceed automatically when they finish. Google approval is pending. Evidence: `review/submitted.png`.
+
+The production submission includes version 2.0 (1), full rollout to all 177 listed countries/regions plus the rest of the world, the English store listing with eight actual Android screenshots, content rating and target audience, privacy policy, data safety and content declarations. Managed publishing is off. Both subscription base plans are active. No real purchase was made during setup.
